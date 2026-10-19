@@ -1,0 +1,32 @@
+[project]
+name = "fd-legal-kg"
+version = "0.1.0"
+description = "识律·法律时序知识图谱试点：基于 Zep Graphiti + FalkorDB 的引导案例/法规条文抽取与双时间查询"
+requires-python = ">=3.10"
+dependencies = [
+    # graphiti-core 0.31.1 的实际依赖闭包中有两个坑（见 README「API reality notes」）：
+    # 1) openai>=3.34 依赖的是 httpx2（import 名不同），而 graphiti 内部 `import httpx`，需显式声明 httpx；
+    # 2) FalkorDriver 在 import 期就 `import falkordb`，需显式安装 falkordb 客户端包。
+    "graphiti-core==0.31.1",
+    "falkordb>=1.8.0",
+    "httpx>=0.27",
+    "psycopg[binary]>=3.2",
+    "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-asyncio>=0.23",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["fd_legal_kg*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

@@ -1,0 +1,31 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+
+# 本地环境 / 凭据（试点连接网关、law_db、FalkorDB 的全部凭据都在这里）
+.env
+.env.*
+!.env.example
+pilot.env
+
+# 试点运行产物：账本、state、日志、语料快照、评测取证
+# （这些是过程数据，结论数字已进 openspec/changes 的报告；
+#   权威副本在 zihan 的 /home/ubuntu/lexkg-data，不进版本控制）
+data/
+*.jsonl
+*.log
+run_state.json*
+
+# 图库本地文件（falkordblite）
+*.rdb
+*.dump
+dump.rdb
+
+# deepeval 本地缓存
+.deepeval/
