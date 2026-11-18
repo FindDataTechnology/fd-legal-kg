@@ -1,5 +1,7 @@
 # fd-legal-kg 识律·法律时序知识图谱（试点 sidecar）
 
+> **Part of the [Lex line (寻数·识律)](https://www.finddatatech.cloud/products/lex) of [FindData](https://www.finddatatech.cloud)** — Legal knowledge graph — concept extraction and relation building over legal corpora.
+
 在 Zep [Graphiti](https://help.getzep.com/graphiti)（`graphiti-core==0.31.1`）之上构建的法律领域时序知识图谱试点：
 以「episode」为单位摄取 law_db（只读）中的指导性案例全文与法规条文级切片，
 经 OpenAI 兼容 LLM 网关抽取法律实体/事实，落到 FalkorDB，并带双时间效力
