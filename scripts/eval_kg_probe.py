@@ -3,7 +3,7 @@
 不依赖 evalrunner 的 CLI（那条路径要同时连基线与图库），此脚本只做 KG 侧，
 输出与对照表同构的 JSONL，便于与基线 run3 逐题并排。
 
-用法（zihan）:
+用法（图主机）:
     set -a; . /home/ubuntu/lexkg-data/pilot.env; set +a
     python scripts/eval_kg_probe.py \
         --questions data/eval_questions_draft.json \

@@ -16,7 +16,7 @@ pilot.env
 
 # 试点运行产物：账本、state、日志、语料快照、评测取证
 # （这些是过程数据，结论数字已进 openspec/changes 的报告；
-#   权威副本在 zihan 的 /home/ubuntu/lexkg-data，不进版本控制）
+#   权威副本在 图主机上的 /home/ubuntu/lexkg-data，不进版本控制）
 data/
 *.jsonl
 *.log

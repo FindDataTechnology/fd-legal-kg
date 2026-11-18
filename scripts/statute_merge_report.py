@@ -1,6 +1,6 @@
 """法规名归并审计报告：读图统计「条号分裂」造成的聚合损失，并给出归并后增益。
 
-只读，不改图。用法（zihan）:
+只读，不改图。用法（图主机）:
     /home/ubuntu/fd-legal-kg-venv/bin/python scripts/statute_merge_report.py [--graph pilot]
 """
 from __future__ import annotations

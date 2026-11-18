@@ -38,7 +38,7 @@ def test_schema_serializable_empty_object():
 
 
 def test_models_are_attributeless_for_falkordb():
-    """live 验证（zihan FalkorDB）：非空 attributes 写边触发 primitive-type 限制，
+    """live 验证（图主机 FalkorDB）：非空 attributes 写边触发 primitive-type 限制，
     故试点七类模型一律无字段、类型语义由 docstring 承载。"""
     for name, cls in ENTITY_TYPES.items():
         assert cls.model_fields == {}, name

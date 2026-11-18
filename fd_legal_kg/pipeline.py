@@ -91,7 +91,7 @@ def episode_to_add_episode_kwargs(ep: Episode, structured_mode: str = 'native') 
         'source': EpisodeType.text,
         'group_id': ep.group_id,
         # 不传 uuid：传入即走 EpisodicNode.get_by_uuid 路径，FalkorDB 下实测连接被服务端
-        # 关闭（zihan 05:4x 两轮复现）；断点续跑由 runner 的 state 文件承担，不依赖图内 uuid。
+        # 关闭（图主机 05:4x 两轮复现）；断点续跑由 runner 的 state 文件承担，不依赖图内 uuid。
         'entity_types': dict(ENTITY_TYPES),
         'custom_extraction_instructions': prompts.build_custom_extraction_instructions(
             structured_mode

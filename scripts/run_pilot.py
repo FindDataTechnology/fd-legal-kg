@@ -1,6 +1,6 @@
 """试点跑批器：512 episode -> FalkorDB 图（断点续跑，逐条容错，账本自动记录）。
 
-用法（zihan）:
+用法（图主机）:
     set -a; . /home/ubuntu/lexkg-data/pilot.env; set +a
     python scripts/run_pilot.py \
         --episodes /home/ubuntu/lexkg-data/pilot_episodes.jsonl \

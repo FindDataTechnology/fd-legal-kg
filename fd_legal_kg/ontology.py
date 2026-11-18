@@ -9,7 +9,7 @@ live 验证（graphiti-core 0.31.1）：实体模型的字段必须全部 Option
 from __future__ import annotations
 
 # 注意：graphiti EntityNode 自带 name 属性；实体类型模型里不得再声明 name/title 等保留名。
-# FalkorDB 实测（zihan, falkordblite 0.10.0 linux）：属性抽取产生的非空 attributes 在边/节点写入
+# FalkorDB 实测（图主机, falkordblite 0.10.0 linux）：属性抽取产生的非空 attributes 在边/节点写入
 # 时触发 "Property values can only be of primitive types"；空模型（仅 docstring）路径端到端已验证。
 # 类型语义完全由 docstring 承载（graphiti 将其注入抽取 prompt）。
 from pydantic import BaseModel
